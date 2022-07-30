@@ -1,0 +1,140 @@
+@use "./SASS/Layout/global-rules";
+@use "./SASS/Pages/contact";
+@use "./SASS/variables/colors" as *;
+
+$main_color: red;
+
+.header {
+  background-color: $main-color;
+}
+
+.footer {
+  $main-color: green !global;
+  background-color: $main-color;
+}
+
+.section {
+  background-color: $main-color;
+}
+
+.side-bar {
+  background-color: $main;
+  color: $alt;
+}
+
+$max-mobile: "max-width: 550px";
+
+@media ($max-mobile) {
+  .footer {
+    padding: 0;
+  }
+}
+
+.parent {
+  background-color: aqua;
+  .child {
+    background-color: black;
+    .grand-child {
+      background-color: rebeccapurple;
+    }
+  }
+}
+
+.parent-one,
+.parent-two {
+  padding: 20px;
+  .child {
+    background-color: blue;
+  }
+}
+
+.box {
+  &.title {
+    color: red;
+  }
+  &:hover {
+    background-color: aqua;
+  }
+}
+.box {
+  border: 1px solid white;
+}
+.box {
+  margin: 15px {
+    bottom: 10px;
+  }
+  border: 1px solid white;
+}
+
+%main-box {
+  background-color: white;
+  border: black;
+}
+
+.box {
+  @extend %main-box;
+  color: rebeccapurple;
+}
+
+$theme: "dark";
+
+.page {
+  @if ($theme == "light") {
+    background-color: white;
+  } @else {
+    background-color: black;
+  }
+}
+
+$rounded: true;
+
+.box {
+  border-radius: if($rounded, 7px, null);
+}
+
+%main-box {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+$width-height: 300px;
+$direction: "right";
+.arrow-div {
+  @extend %main-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: $width-height;
+  height: $width-height;
+  position: relative;
+  margin: 50px auto;
+  &::before {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    @if ($direction == "top") {
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-color: rebeccapurple;
+    } @else if($direction == "right") {
+      right: -40px;
+      border-left-color: rgb(2, 0, 146);
+    } @else if ($direction == "bottom") {
+      bottom: -40px;
+      border-top-color: rgb(255, 0, 0);
+    } @else {
+      left: -40px;
+      border-right-color: rgb(20, 152, 159);
+    }
+  }
+}
+
+$company: "AJAXON";
+$postion: "left";
+.ad-#{$company} {
+  font-size: 20px;
+  #{$postion}: 0;
+}

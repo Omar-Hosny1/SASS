@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+.contact {
+  padding-right: 5px;
+}
+
+.header {
+  background-color: red;
+}
+
+.footer {
+  background-color: green;
+}
+
+.section {
+  background-color: green;
+}
+
+.side-bar {
+  background-color: rgb(6, 24, 62);
+  color: rgb(31, 177, 31);
+}
+
+@media (max-width: 550px) {
+  .footer {
+    padding: 0;
+  }
+}
+.parent {
+  background-color: aqua;
+}
+.parent .child {
+  background-color: black;
+}
+.parent .child .grand-child {
+  background-color: rebeccapurple;
+}
+
+.parent-one,
+.parent-two {
+  padding: 20px;
+}
+.parent-one .child,
+.parent-two .child {
+  background-color: blue;
+}
+
+.box.title {
+  color: red;
+}
+.box:hover {
+  background-color: aqua;
+}
+
+.box {
+  border: 1px solid white;
+}
+
+.box {
+  margin: 15px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+
+.arrow-div, .box {
+  background-color: white;
+  border: black;
+}
+
+.box {
+  color: rebeccapurple;
+}
+
+.page {
+  background-color: black;
+}
+
+.box {
+  border-radius: 7px;
+}
+
+.arrow-div, .box {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.arrow-div {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 50px auto;
+}
+.arrow-div::before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  right: -40px;
+  border-left-color: rgb(2, 0, 146);
+}
+
+.ad-AJAXON {
+  font-size: 20px;
+  left: 0;
+}/*# sourceMappingURL=main.css.map */
