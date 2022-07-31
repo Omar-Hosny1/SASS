@@ -2,6 +2,7 @@
 @use "./SASS/Pages/contact";
 @use "./SASS/variables/colors" as *;
 @use "./SASS/helpers/mixins" as *;
+@use "./SASS/helpers/functions" as *;
 $main_color: red;
 
 .header {
@@ -193,4 +194,15 @@ $start: 1;
     width: $start * 100px;
   }
   $start: $start + 1;
+}
+
+$width: 200px;
+
+.element {
+  width: $width;
+  height: half($width);
+}
+
+.section {
+  width: calcWidth(1px, 2, 3, 4, 5, 6);
 }
