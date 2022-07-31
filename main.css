@@ -28,6 +28,7 @@
     padding: 0;
   }
 }
+/* Parent Component Start */
 .parent {
   background-color: aqua;
 }
@@ -38,6 +39,7 @@
   background-color: rebeccapurple;
 }
 
+/* Parent Component End */
 .parent-one,
 .parent-two {
   padding: 20px;
@@ -109,4 +111,130 @@
 .ad-AJAXON {
   font-size: 20px;
   left: 0;
+}
+
+ul.links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.font-size-10 {
+  font-size: 10px;
+}
+
+.font-size-11 {
+  font-size: 11px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-13 {
+  font-size: 13px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-15 {
+  font-size: 15px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-17 {
+  font-size: 17px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-19 {
+  font-size: 19px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.red-theme {
+  background-color: red;
+}
+
+.green-theme {
+  background-color: green;
+}
+
+.blue-theme {
+  background-color: blue;
+}
+
+.yellow-theme {
+  background-color: yellow;
+}
+
+.facebook {
+  background-color: blue;
+}
+
+.yahoo {
+  background-color: aqua;
+}
+
+.youtube {
+  background-color: red;
+}
+
+.width-100 {
+  width: 100px;
+}
+
+.width-200 {
+  width: 200px;
+}
+
+.width-300 {
+  width: 300px;
+}
+
+.width-400 {
+  width: 400px;
+}
+
+.width-500 {
+  width: 500px;
+}
+
+.width-600 {
+  width: 600px;
+}
+
+.width-700 {
+  width: 700px;
+}
+
+.width-800 {
+  width: 800px;
+}
+
+.width-900 {
+  width: 900px;
+}
+
+.width-1000 {
+  width: 1000px;
 }/*# sourceMappingURL=main.css.map */

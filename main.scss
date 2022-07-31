@@ -1,7 +1,7 @@
 @use "./SASS/Layout/global-rules";
 @use "./SASS/Pages/contact";
 @use "./SASS/variables/colors" as *;
-
+@use "./SASS/helpers/mixins" as *;
 $main_color: red;
 
 .header {
@@ -29,7 +29,7 @@ $max-mobile: "max-width: 550px";
     padding: 0;
   }
 }
-
+/* Parent Component Start */
 .parent {
   background-color: aqua;
   .child {
@@ -39,6 +39,7 @@ $max-mobile: "max-width: 550px";
     }
   }
 }
+/* Parent Component End */
 
 .parent-one,
 .parent-two {
@@ -137,4 +138,59 @@ $postion: "left";
 .ad-#{$company} {
   font-size: 20px;
   #{$postion}: 0;
+}
+
+ul.links {
+  @include list-reset();
+}
+
+@mixin circle($dimension, $form) {
+  border-radius: 50%;
+  width: $dimension;
+  height: $dimension;
+  @if ($form == "center") {
+    margin: 0 auto;
+  } @else {
+    margin: 0;
+  }
+}
+
+.circle {
+  @include circle(500px, "center");
+  background-color: black;
+}
+
+@for $i from 0 to 11 {
+  .font-size-#{10 + $i} {
+    font-size: 10px + $i;
+  }
+}
+
+$themes: red, green, blue, yellow;
+
+@each $theme in $themes {
+  .#{$theme}-theme {
+    background-color: $theme;
+  }
+}
+
+$socials: (
+  "facebook": blue,
+  "yahoo": aqua,
+  "youtube": red,
+);
+
+@each $name, $color in $socials {
+  .#{$name} {
+    background-color: $color;
+  }
+}
+
+$start: 1;
+
+@while $start < 11 {
+  .width-#{$start * 100} {
+    width: $start * 100px;
+  }
+  $start: $start + 1;
 }

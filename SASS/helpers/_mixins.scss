@@ -1,0 +1,16 @@
+@mixin circle($dimension, $form) {
+  border-radius: 50%;
+  width: $dimension;
+  height: $dimension;
+  @if ($form == "center") {
+    margin: 0 auto;
+  } @else {
+    margin: 0;
+  }
+}
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
